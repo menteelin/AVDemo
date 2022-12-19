@@ -5,9 +5,10 @@
    Note: This file is ignored for devices older that API 31
    See https://developer.android.com/about/versions/12/backup-restore
 -->
-<full-backup-content>
-    <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
+<full-backup-content xmlns:tools="http://schemas.android.com/tools">
+    <exclude domain="sharedpref" path="AppCenter.xml"/>
+    <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+    <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+    <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+    <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
 </full-backup-content>

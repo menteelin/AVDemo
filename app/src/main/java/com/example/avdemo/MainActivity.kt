@@ -11,8 +11,12 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import java.io.IOException
 import java.util.*
+
 
 /***
  * 使用 MediaRecorder 录音，使用 MediaPlayer 播放。录音时获取声音的大小，播放时监听是否播放完成，播放完成释放资源。
@@ -41,6 +45,10 @@ class MainActivity : AppCompatActivity() {
 
         mFileName = externalCacheDir!!.absolutePath
         mFileName += "/audiorecordtest.3gp"
+
+        AppCenter.start(
+            application, "e7e9acff-1ebd-4727-9927-24202114141b", Analytics::class.java, Crashes::class.java
+        )
 
     }
 
