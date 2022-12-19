@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    tools:context=".ScreenRecordActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_record"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="record"
+        android:text="Start recording"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="play"
+        android:text="Start playing"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:max="32767"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="enterVideoPage"
+        android:text="视频播放器"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="enterScreenRecordPage"
+        android:text="屏幕录制"/>
+
+</LinearLayout>
